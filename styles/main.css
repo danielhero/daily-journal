@@ -1,0 +1,5 @@
+.journalForm {
+   display: flex;
+   flex: wrap;
+   flex-direction: column;
+}
