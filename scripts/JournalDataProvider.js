@@ -9,10 +9,10 @@
 // This is the original data. Can't Touch This.
 const journal = [
     {
-        date: "07/24/2025",
+        date: "02/18/2020",
         concept: "HTML & CSS",
         entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Ok"
+        mood: "Happy"
     },
     {
         date: "02/27/2020",
