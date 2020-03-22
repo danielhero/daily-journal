@@ -8,6 +8,7 @@ const JournalEntryComponent = (entry) => {
            <div>
            <p>${entry.date}</p> 
            <p>${entry.entry}</p>
+           <p>Mood: ${entry.mood}</p>
            </div> 
         </section>
     `

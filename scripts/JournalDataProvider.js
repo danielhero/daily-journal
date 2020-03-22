@@ -7,26 +7,8 @@
  */
 
 // This is the original data. Can't Touch This.
-const journal = [
-    {
-        date: "02/18/2020",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Happy"
-    },
-    {
-        date: "02/27/2020",
-        concept: "JS Object Automation",
-        entry: "We talked about using JS to hold raw data, then transfer that info into HTML via functions.",
-        mood: "Sad" 
-    },
-    {
-        date: "02/24/2020",
-        concept: "Hello, World",
-        entry: "We stated our first group project called 'Hello, World' about making a travel broshure.",
-        mood: "Content"
-    }
-]
+let journal = []
+    
 
 /*
     You export a function that provides a version of the
@@ -38,4 +20,12 @@ export const useJournalEntries = () => {
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
     )
     return sortedByDate
+}
+
+export const getEntries = () => {
+    return fetch('http://localhost:3000/entries')
+        .then(response => response.json())
+        .then(parsedEntries => {
+            journal = parsedEntries
+        })
 }
